@@ -34,12 +34,16 @@ def _authenticate(cls, auth_url):
     return cls._authenticate(auth_url, body)
 
 
-def authenticate_us(cls,
-                    auth_url=auth_url_us()):
+def authenticate(cls, auth_url=auth_url_us()):
     """Authenticate against the Rackspace US auth service."""
     return _authenticate(cls, auth_url)
 
-def authenticate_uk(cls,
-                    auth_url=auth_url_uk()):
+
+def authenticate_us(cls, auth_url=auth_url_us()):
+    """Authenticate against the Rackspace US auth service."""
+    return _authenticate(cls, auth_url)
+
+
+def authenticate_uk(cls, auth_url=auth_url_uk()):
     """Authenticate against the Rackspace UK auth service."""
     return _authenticate(cls, auth_url)
